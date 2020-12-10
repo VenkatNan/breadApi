@@ -9,7 +9,10 @@ module.exports = {
   }
 
 function index(req,res){
-
+    Bread.find({})
+    .then((bread)=>{
+        res.status(200).json(bread)
+    })
   }
 
 function show(req,res){
